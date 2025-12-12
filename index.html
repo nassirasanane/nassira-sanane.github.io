@@ -187,7 +187,6 @@
             font-size: 0.85em;
         }
 
-        /* Style pour la vidéo preview */
         .video-preview {
             margin: 20px 0;
             border-radius: 10px;
@@ -210,7 +209,7 @@
         .video-thumbnail {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
+            padding-bottom: 56.25%;
             background: #000;
             overflow: hidden;
         }
@@ -264,7 +263,6 @@
             font-size: 1em;
         }
 
-        /* Modal pour la vidéo */
         .video-modal {
             display: none;
             position: fixed;
@@ -422,7 +420,7 @@
             }
 
             .video-thumbnail {
-                padding-bottom: 75%; /* Ratio plus carré sur mobile */
+                padding-bottom: 75%;
             }
 
             .play-button {
@@ -447,7 +445,7 @@
                 <a href="mailto:nassirasanane@gmail.com">📧 Email</a>
                 <a href="https://linkedin.com/in/nassira-sanane" target="_blank">💼 LinkedIn</a>
                 <a href="tel:+212774401438">📱 +212 7 74 40 14 38</a>
-                <a href="#" onclick="alert('Ajoutez votre lien GitHub ici')">💻 GitHub</a>
+                <a href="https://github.com/nassirasanane" target="_blank">💻 GitHub</a>
             </div>
         </div>
     </header>
@@ -543,7 +541,6 @@
                     <p class="project-meta">📅 Juillet - Septembre 2025 | BEST AHRAL</p>
                     <p>Application full-stack temps réel pour la gestion complète de chantiers industriels avec suivi en direct des ressources, planning et équipes.</p>
                     
-                    <!-- ZONE VIDÉO - Preview cliquable -->
                     <div class="video-preview">
                         <div class="video-preview-link" onclick="openVideoModal()">
                             <div class="video-thumbnail">
@@ -567,7 +564,7 @@
                         <span class="tech-badge">WebSocket</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="btn" onclick="alert('Ajoutez votre lien GitHub')">📂 Code Source</a>
+                        <a href="https://github.com/nassirasanane/systeme-gestion-chantiers" target="_blank" class="btn">📂 Code Source</a>
                     </div>
                 </div>
 
@@ -729,7 +726,6 @@
         </div>
     </footer>
 
-    <!-- Modal pour la vidéo -->
     <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
         <div class="video-modal-content" onclick="event.stopPropagation()">
             <span class="close-modal" onclick="closeVideoModal()">&times;</span>
@@ -743,18 +739,17 @@
             const iframe = document.getElementById('videoFrame');
             iframe.src = 'https://www.youtube.com/embed/_JOduwdW09c?autoplay=1';
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Empêche le scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeVideoModal() {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('videoFrame');
-            iframe.src = ''; // Stop la vidéo
+            iframe.src = '';
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Réactive le scroll
+            document.body.style.overflow = 'auto';
         }
 
-        // Fermer avec la touche Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeVideoModal();
