@@ -616,12 +616,171 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5em; }
-            .section-title { font-size: 2em; }
-            .projects-grid { grid-template-columns: 1fr; }
-            nav ul { flex-direction: column; gap: 20px; padding: 20px; }
-            .timeline { padding-left: 30px; }
-            .timeline-item::before { left: -42px; }
+            .hero h1 { 
+                font-size: 2.5em;
+                letter-spacing: -1px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2em;
+            }
+            
+            .profile-image {
+                width: 140px;
+                height: 140px;
+                font-size: 50px;
+            }
+            
+            .section-title { 
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .projects-grid { 
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .screenshots-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .screenshot-item img {
+                height: 150px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            nav {
+                padding: 10px 0;
+            }
+            
+            nav ul { 
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 10px 20px;
+                justify-content: center;
+            }
+            
+            nav li {
+                flex: 0 0 auto;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                padding: 0 20px;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .timeline { 
+                padding-left: 30px;
+            }
+            
+            .timeline-item {
+                padding: 20px;
+            }
+            
+            .timeline-item::before { 
+                left: -42px;
+            }
+            
+            .project-content {
+                padding: 25px;
+            }
+            
+            .project-card h3 {
+                font-size: 1.4em;
+            }
+            
+            .tech-stack {
+                gap: 8px;
+            }
+            
+            .tech-badge {
+                font-size: 0.8em;
+                padding: 6px 14px;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .modal-content {
+                max-width: 95%;
+                max-height: 80vh;
+            }
+            
+            .modal-content iframe {
+                height: 50vh;
+            }
+            
+            .close-modal {
+                top: -45px;
+                right: 5px;
+                width: 45px;
+                height: 45px;
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero-subtitle {
+                font-size: 1em;
+            }
+            
+            .section-title {
+                font-size: 1.6em;
+            }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .screenshot-item img {
+                height: 180px;
+            }
+            
+            nav ul {
+                gap: 10px;
+                font-size: 0.9em;
+            }
+            
+            .cta-btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -674,7 +833,7 @@
                             <span class="tech-badge">React.js</span>
                             <span class="tech-badge">Node.js</span>
                             <span class="tech-badge">API RESTful</span>
-                            <span class="tech-badge">WebSocket</span>
+                            <span class="tech-badge">Prisma</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/nassirasanane/systeme-gestion-chantiers" target="_blank" class="btn">Code Source</a>
@@ -711,7 +870,6 @@
                             <span class="tech-badge">Laravel</span>
                             <span class="tech-badge">MySQL</span>
                             <span class="tech-badge">Bootstrap</span>
-                            <span class="tech-badge">API RESTful</span>
                         </div>
                     </div>
                 </div>
@@ -720,7 +878,7 @@
                     <div class="project-content">
                         <h3>🏢 Gestion de Centre</h3>
                         <p class="project-meta">📅 Mai - Juin 2023 | GYGES, Casablanca</p>
-                        <p>Plateforme web responsive pour la gestion complète d'un centre : membres, réservations, activités et reporting avec interfaces utilisateur intuitives.</p>
+                        <p>Notre projet vise à aider les organisations éducatives dans leur quotidien, en automatisant les tâches administratives. Ce système de gestion scolaire offre des fonctionnalités allant des applications et de l'inscription aux cours à la surveillance détaillée des performances et aux finances.</p>
                         
                         <div class="screenshots-grid">
                             <div class="screenshot-item" onclick="openScreenshotModal(this)">
